@@ -308,7 +308,7 @@ function winCondition() {
     //vertical
     for (var i = 1; i < 8; i++) {
         for (var j = 1; j < 4; j++) {
-            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i][j + 1] && pos_array[i][j] === pos_array[i][j + 2] && pos_array[i][j] === pos_array[i][j + 3]) {
+            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i][j + 1] && pos_array[i][j] === pos_array[i][j + 2] ) {
                 win(i, j, "v");
             }
         }
@@ -316,7 +316,7 @@ function winCondition() {
     // /diagonals
     for (var i = 1; i < 5; i++) {
         for (var j = 4; j < 7; j++) {
-            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j - 1] && pos_array[i][j] === pos_array[i + 2][j - 2] && pos_array[i][j] === pos_array[i + 3][j - 3]) {
+            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j - 1] && pos_array[i][j] === pos_array[i + 2][j - 2]) {
                 win(i, j, "//");
             }
         }
@@ -324,7 +324,7 @@ function winCondition() {
     // \diagonals
     for (var i = 1; i < 5; i++) {
         for (var j = 1; j < 4; j++) {
-            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j + 1] && pos_array[i][j] === pos_array[i + 2][j + 2] && pos_array[i][j] === pos_array[i + 3][j + 3]) {
+            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j + 1] && pos_array[i][j] === pos_array[i + 2][j + 2] ) {
                 win(i, j, "\\");
             }
         }
@@ -362,7 +362,7 @@ function drawWinBanner(color) {
 
 function drawWinXs(i, j, direction) {
     //repeat four times because it's connect FOUR
-    for (var n = 1; n < 5; n++) {
+    for (var n = 1; n < 4; n++) {
         //draw the X
         ctx.drawImage(XXX, (bw / 7) * (i - 1), (bh / 6) * (j - 1), (bw / 7), (bh / 6));
         //change the coordinate position based on which direction the win was

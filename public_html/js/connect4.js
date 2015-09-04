@@ -299,7 +299,7 @@ function winCondition() {
     //horizontal
     for (var i = 1; i < 5; i++) {
         for (var j = 1; j < 7; j++) {
-            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j] && pos_array[i][j] === pos_array[i + 2][j] ) {
+            if (pos_array[i][j] !== undefined && pos_array[i][j] === pos_array[i + 1][j] && pos_array[i][j] === pos_array[i + 2][j] && pos_array[i][j] === pos_array[i + 3][j]) {
                 win(i, j, "h");
             }
         }
